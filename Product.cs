@@ -59,7 +59,7 @@ namespace SimplerRetail
             var id = textBoxID.Text = dataGridViewProduct.SelectedRows[0].Cells[0].Value.ToString();
             //id yang dipilih dari tabel di masukkan ke dalam textbox dalam bentuk string
             
-            var product = _db.Products.Find(id);//variabel id berisi id dari produk
+            var product = _db.Products.Find(id);//variabel product berisi id dari produk
             product.Supplier = _db.Suppliers.Find(product.SupplierId);//ambil id supplier
 
             textBoxName.Text = product.Name;//setiap textbox memiliki value dari tabel yang di klik sesuai nama textboxnya
